@@ -32,7 +32,7 @@ VALUES
 (3, 3, 20, '2023-04-30');
 
 
-INSERT INTO shop_dns (shop_id, date, product_id, sales_cnt)
+INSERT INTO shop_dns (dns_id, date, product_id, sales_cnt)
 VALUES
 (1, '2023-10-08', 1, 9),
 (1, '2023-09-28', 1, 5),
@@ -48,7 +48,7 @@ VALUES
 (1, '2023-01-20', 3, 9),
 (1, '2023-02-30', 3, 8);
 
-INSERT INTO shop_mvideo (shop_id, date, product_id, sales_cnt)
+INSERT INTO shop_mvideo (mvideo_id, date, product_id, sales_cnt)
 VALUES
 (2, '2023-08-08', 1, 5),
 (2, '2023-07-28', 1, 5),
@@ -64,7 +64,7 @@ VALUES
 (2, '2023-01-20', 3, 9),
 (2, '2023-01-30', 3, 7);
 
-INSERT INTO shop_sitilink (shop_id, date, product_id, sales_cnt)
+INSERT INTO shop_sitilink (sitilink_id, date, product_id, sales_cnt)
 VALUES
 (3, '2023-07-08', 1, 5),
 (3, '2023-07-12', 1, 6),
