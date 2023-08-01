@@ -19,10 +19,12 @@ WITH sales AS(
 							sf.sales_fact*pr.price AS income_fact,
 							p.plan_cnt*pr.price AS income_plan
 				FROM		sales_count AS sf
-				JOIN		product AS pr ON sf.product_id = pr.product_id
-				JOIN		shop AS sh ON sf.shop_id = sh.shop_id
+				JOIN		products AS pr ON sf.product_id = pr.product_id
+				JOIN		shops AS sh ON sf.shop_id = sh.shop_id
 				JOIN		plan AS p ON sh.shop_id = p.shop_id AND p.product_id = pr.product_id AND date_part('month', p.plan_date) = sf.m
 				GROUP BY sh.shop_id, pr.product_id, sf.sales_fact, p.plan_date, p.plan_cnt
 			) as t
 
 ORDER BY  plan_date, shop_name, product_name;
+
+
