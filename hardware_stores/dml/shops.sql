@@ -11,7 +11,7 @@ WITH sales AS(
 					FROM sales s
 					GROUP BY shop_id, product_id, date_part('month', s.date)
 				)
-	SELECT	plan_date, shop_name, product_name, sales_fact, plan_cnt AS sales_plan,sales_fact/plan_cnt AS sales_fp,
+	SELECT	TO_CHAR(plan_date, 'Month') AS "Month", shop_name, product_name, sales_fact, plan_cnt AS sales_plan,sales_fact/plan_cnt AS sales_fp,
 			income_fact, income_plan, income_fact/income_plan	AS income_fact_plan
 
     FROM(SELECT	 p.plan_date, sh.shop_name, pr.product_name, sf.sales_fact, p.plan_cnt, 
