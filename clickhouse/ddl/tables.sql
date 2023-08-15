@@ -1,12 +1,12 @@
 CREATE TABLE IF NOT EXISTS product
 ( product_id Int32
 , product_name String
-, price Decimal32(2)
+, price Float64
 )
 ENGINE = MergeTree()
 PRIMARY KEY(product_id);
 
-CREATE TABLE IF NOT EXISTS shops
+CREATE TABLE IF NOT EXISTS shop
 ( shop_id Int32
 , shop_name String
 )
